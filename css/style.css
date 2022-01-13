@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/*PAGE HEADDER*/
+
+.page-header .container {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-nav-list {
+    display: flex;
+}
+
+.page-nav-list li {
+    margin-left:20px;
+}
+.page-nav-list a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #8E9696;
+    font-weight: 600;
+}
+.page-nav-list a:hover {
+    color: #213131;
+}
+
+/*BANNER*/
+
+.banner {
+    height: 560px;
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.banner-title {
+    font-size: 57px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.banner-title span {
+    text-decoration: underline;
+    font-weight: 900;
+}
+.banner-text {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+/*MAIN CONTENT*/
+
+.article {
+    text-align: center;
+    max-width: 280px;
+}
+.article-photo-img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.article-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 30px auto;
+}
+.article-text {
+    color: #B0AEAB;
+    margin-bottom: 30px;
+}
+.article-btn {
+    padding: 15px 25px;
+    border: 2px solid #F35044;
+    color: #F35044;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.page-content .container {
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*FOOTER*/
+
+.page-footer {
+    height: 180px;
+    background: #F2F2F2;
+}
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.page-footer-nav-list {
+    display: flex;
+}
+
+.page-footer-nav-list li {
+    margin-left: 20px;
+}
+.page-footer-nav-list a {
+    text-decoration: none;
+    color: #8E9696;
+}
+.page-footer-nav-list a:hover {
+    color: #F35044;
+}
+.page-footer-copyright {
+    color: #B6B6B6;
+    font-style: italic;
+}
