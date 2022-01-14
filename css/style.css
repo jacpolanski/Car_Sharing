@@ -9,13 +9,20 @@
 
 body {
     font-family: 'Nunito Sans', sans-serif;
-    min-width: 1088px;
+
 }
 
 .container {
     margin: 0 auto;
     width: 100%;
-    max-width: 1088px;
+    min-width: 1088px;
+    max-width: 80vh;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
 }
 
 /*MAIN VIEW*/
@@ -52,11 +59,12 @@ body {
     position: absolute;
     bottom: -27.5px;
     left: calc(50% - 27.5px);
-    transition: 1.5s;
+    transition: 1s;
 }
 
 .main-view > a:hover::after {
-     bottom: -33px;
+    bottom: -33px;
+    filter: blur(0.2px) brightness(1.1) hue-rotate(5deg) opacity(0.9) saturate(1.3) sepia(0.4);
 }
 
 /*PAGE HEADER*/
@@ -124,6 +132,7 @@ section.banner {
     align-items: center;
     justify-content: center;
 }
+
 .banner .container {
     color: #fff;
     display: flex;
@@ -173,12 +182,18 @@ section.banner {
     color: rgba(255, 255, 255, 1);
 }
 
+
 /*BLOG CONTENT*/
-.blog{
+
+.blog a.anchor {
+    top: -60px;
+}
+
+.blog {
     margin: 90px 0 100px 0;
 }
 
-h2.container{
+h2.container {
     margin-bottom: 35px;
     font-weight: 700;
     font-size: 35px;
@@ -200,21 +215,31 @@ h2.container::after {
     display: block;
     margin: 0 10px;
 }
-.blog-title{
+
+.blog-title {
     text-transform: uppercase;
     font-weight: 700;
 }
+
 .blog-article {
     text-align: left;
     color: rgba(106, 106, 106, 1);
 }
-.blog-article:nth-of-type(2){
+
+.blog-article:nth-of-type(2) {
     margin: 0 16px;
 }
+
 .blog-article-image {
     max-width: calc((100vw / 3) - 20px);
+    width: 25%;
     min-width: 352px;
     height: auto;
+}
+
+.blog-article-image:hover,
+.main-article-image:hover{
+    filter: blur(0.2px) brightness(1.1) hue-rotate(5deg) opacity(0.9) saturate(1.3) sepia(0.4);
 }
 
 .blog-article-title {
@@ -224,19 +249,22 @@ h2.container::after {
     font-weight: 400;
     margin: 25px 0 25px 0;
 }
+
 .blog-article-text {
-    font-family: "Open sans",sans-serif;
-    max-width: calc(100vw / 3);
-    width: 260px;
+    font-family: "Open sans", sans-serif;
+    max-width: 600px;
+    width: 25%;
+    min-width: 260px;
     color: #B0AEAB;
     margin-bottom: 30px;
 }
+
 .blog-article-btn {
     width: 142px;
     height: 40px;
     border: 2px solid #F35044;
-    color: rgb(255,255,255);
-    background: rgb(255,0,0);
+    color: rgb(255, 255, 255);
+    background: rgb(255, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,7 +274,247 @@ h2.container::after {
     font-size: 14px;
 }
 
+.blog-article-btn:hover {
+    background: #ffa0a0;
+    box-shadow: 0 3px 6px #0000004D;
+    border: 1px solid #382727FF;
+    color: #382727FF;
+}
+
+.blog-article-btn:active {
+    box-shadow: inset 3px 3px 6px #0000004D;
+}
+
 .blog div.container {
     display: flex;
     justify-content: space-around;
+}
+
+/*SERVICE - MAIN PAGE CONTENT*/
+
+.page-content a.anchor {
+    top: -90px;
+}
+
+.page-content {
+    color: #fff;
+    background: #28272C;
+    padding-bottom: 100px;
+}
+
+h2.container {
+    padding-top: 60px;
+}
+
+.main-title {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.main-article {
+    max-width: calc(100vh / 4);
+    text-align: center;
+    color: rgba(106, 106, 106, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-article:nth-of-type(2) {
+    margin: 0 16px;
+}
+
+.main-article-image {
+    width: 25%;
+    min-width: 170px;
+    border-radius: 50%;
+    height: auto;
+}
+
+.main-article-title {
+    width: 230px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 25px 0 25px 0;
+}
+
+.main-article-text {
+    font-family: "Open sans", sans-serif;
+
+    width: 100%;
+    min-width: 230px;
+    color: #B0AEAB;
+    margin-bottom: 30px;
+}
+
+.main-article-btn {
+    width: 142px;
+    height: 40px;
+    border: 2px solid #F35044;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.main-article-btn:hover {
+    box-shadow: 0 3px 6px #0000004D;
+    border: 1px solid #382727FF;
+    color: #382727FF;
+}
+
+.main-article-btn:active {
+    box-shadow: inset 3px 3px 6px #0000004D;
+}
+
+.page-content div.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*CONTACT SECTION*/
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact a.anchor {
+    top: -60px;
+}
+
+.contact-image {
+    padding: 0 8px;
+    margin-bottom: 61.5px;
+    width: 50%;
+}
+
+.contact div.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 405px;
+    width: 50%;
+    padding: 0 10px;
+
+}
+
+h2.container {
+    padding-top: 65px;
+}
+
+/*start checkbox styling*/
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    cursor: pointer;
+    display: flex;
+    font-size: 10px;
+    font-family: "Open sans", sans-serif;
+}
+
+.checkbox span {
+    height: 22px;
+    flex-shrink: 0;
+    flex-basis: 22px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.checkbox input:checked + span {
+    background: url("/images/IconCheck.svg") no-repeat center;
+}
+
+/*end checkbox styling*/
+/*start input styling*/
+input,
+textarea {
+    outline: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    height: 38px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #D1D1D1;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    width: 100%;
+    color: #B2B2B2;
+    margin-bottom: 20px;
+}
+
+textarea {
+    min-height: 140px;;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 1px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    border-radius: 8px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*end input styling*/
+
+.contact-btn {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 52px;
+    width: 142px;
+    height: 40px;
+    background: #FFFFFF no-repeat padding-box;
+    border-radius: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.contact-btn:hover {
+    box-shadow: 0 3px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+}
+
+.contact-btn:active {
+    box-shadow: inset 3px 3px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    color: #FF0000;
 }
