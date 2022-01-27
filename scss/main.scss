@@ -1,3 +1,5 @@
+@import "genercs/reset";
+
 @import "https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,800;0,900;1,700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap";
 
@@ -81,6 +83,7 @@ a.anchor {
   display: flex;
 
   li {
+    list-style: none;
     font-weight: 700;
     font-size: 14px;
   }
