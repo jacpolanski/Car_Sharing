@@ -443,9 +443,9 @@ body {
 
 .container {
   margin: 0 auto;
+  padding: 0 1rem;
   width: 100%;
-  min-width: 1088px;
-  max-width: 80vh;
+  max-width: 1088px;
 }
 
 a.anchor {
@@ -494,7 +494,6 @@ a.anchor {
 .page-header {
   position: fixed;
   background: rgba(0, 0, 0, 0.4);
-  min-width: 1088px;
   width: 100%;
 }
 .page-header .container {
