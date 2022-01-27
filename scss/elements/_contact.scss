@@ -1,0 +1,146 @@
+%textInput {
+  outline: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  height: 38px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #D1D1D1;
+  background: #FFFFFF 0 0 no-repeat padding-box;
+  width: 100%;
+  color: #B2B2B2;
+  margin-bottom: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  a.anchor {
+    top: -60px;
+  }
+
+  div.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-image {
+  padding: 0 8px;
+  margin-bottom: 61.5px;
+  width: 50%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 405px;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.checkbox {
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      + {
+        span {
+          background: url("/images/IconCheck.svg") no-repeat center;
+        }
+      }
+    }
+  }
+
+  cursor: pointer;
+  display: flex;
+  font-size: 10px;
+  font-family: "Open sans", sans-serif;
+
+  span {
+    height: 22px;
+    flex-shrink: 0;
+    flex-basis: 22px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+}
+
+input {
+  @extend %textInput;
+  &::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  &:focus {
+    box-shadow: 0 1px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    border-radius: 8px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+textarea {
+  @extend %textInput;
+  min-height: 140px;
+
+  &::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  &:focus {
+    box-shadow: 0 1px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    border-radius: 8px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.contact-btn {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 52px;
+  width: 142px;
+  height: 40px;
+  background: #FFFFFF no-repeat padding-box;
+  border-radius: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s;
+  align-self: flex-end;
+  justify-self: flex-end;
+
+  &:hover {
+    box-shadow: 0 3px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+  }
+
+  &:active {
+    box-shadow: inset 3px 3px 6px #FF00004D;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+  }
+}

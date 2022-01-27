@@ -1,0 +1,126 @@
+.blog {
+  a.anchor {
+    top: -60px;
+  }
+
+  margin: 90px 0 100px 0;
+
+  div.container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+h2.container {
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 35px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 0, 0, 1) 0 0 no-repeat padding-box;
+    box-shadow: 0 1px 6px rgba(255, 0, 0, 0.3);
+    border: 0 rgba(255, 0, 0, 1) solid;
+    border-radius: 8px;
+    display: block;
+    margin: 0 10px;
+  }
+
+  &::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 0, 0, 1) 0 0 no-repeat padding-box;
+    box-shadow: 0 1px 6px rgba(255, 0, 0, 0.3);
+    border: 0 rgba(255, 0, 0, 1) solid;
+    border-radius: 8px;
+    display: block;
+    margin: 0 10px;
+  }
+}
+
+.blog-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.blog-article {
+  text-align: left;
+  color: rgba(106, 106, 106, 1);
+
+  &:nth-of-type(2) {
+    margin: 0 16px;
+  }
+}
+
+.blog-article-image {
+  max-width: calc((100vw / 3) - 20px);
+  width: 25%;
+  min-width: 352px;
+  height: auto;
+
+  &:hover {
+    filter: blur(0.2px) brightness(1.1) hue-rotate(5deg) opacity(0.9) saturate(1.3) sepia(0.4);
+  }
+}
+
+.main-article-image {
+  &:hover {
+    filter: blur(0.2px) brightness(1.1) hue-rotate(5deg) opacity(0.9) saturate(1.3) sepia(0.4);
+  }
+
+  width: 25%;
+  min-width: 170px;
+  border-radius: 50%;
+  height: auto;
+}
+
+.blog-article-title {
+  width: 260px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 400;
+  margin: 25px 0 25px 0;
+}
+
+.blog-article-text {
+  font-family: "Open sans", sans-serif;
+  max-width: 600px;
+  width: 25%;
+  min-width: 260px;
+  color: #B0AEAB;
+  margin-bottom: 30px;
+}
+
+.blog-article-btn {
+  width: 142px;
+  height: 40px;
+  border: 2px solid #F35044;
+  color: rgb(255, 255, 255);
+  background: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 14px;
+
+  &:hover {
+    background: #ffa0a0;
+    box-shadow: 0 3px 6px #0000004D;
+    border: 1px solid #382727FF;
+    color: #382727FF;
+  }
+
+  &:active {
+    box-shadow: inset 3px 3px 6px #0000004D;
+  }
+}

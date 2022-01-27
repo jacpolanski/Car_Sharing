@@ -1,0 +1,23 @@
+.page-nav-list {
+  height: 100%;
+  display: flex;
+
+  li {
+    list-style: none;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 37px 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 1s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

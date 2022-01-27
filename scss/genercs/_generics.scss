@@ -1,0 +1,16 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 1088px;
+  max-width: 80vh;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
