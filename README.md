@@ -42,7 +42,7 @@
 
 
 ## Project Status
-Project is: _no longer being worked on_. Assumed learning taks completed.
+Project is: _no longer being worked on_. Assumed learning task completed.
 
 
 ## Room for Improvement
